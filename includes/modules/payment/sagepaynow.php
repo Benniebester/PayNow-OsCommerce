@@ -501,13 +501,7 @@ class sagepaynow
 
         // Use appropriate merchant identifiers
         $serviceKey = trim( MODULE_PAYMENT_PAYNOW_SERVICE_KEY );
-                
-
-		// Create Links
-		$return_url = tep_href_link( FILENAME_CHECKOUT_PROCESS, 'order_id='. $order_id, 'SSL' );
-		$cancel_url = tep_href_link( FILENAME_CHECKOUT_PAYMENT, '', 'SSL' );
-        $notify_url = tep_href_link('ext/modules/payment/paynow/sagepaynow.php', '', 'SSL', false, false); 
-
+         
         // Clean amount
         $amount = str_replace( ',', '', $order->info['total'] );
         $amount = number_format( $amount, 2, '.', '' );
@@ -518,9 +512,6 @@ class sagepaynow
 			tep_draw_hidden_field( 'm1', $serviceKey ) .
 			tep_draw_hidden_field( 'm2', "24ade73c-98cf-47b3-99be-cc7b867b3080" ) .
 			
-// 			tep_draw_hidden_field( 'return_url', $return_url ) .			
-//             tep_draw_hidden_field( 'notify_url', $notify_url ) . 
-
 			// Customer details			
             tep_draw_hidden_field( 'm9', substr( trim( $order->customer['email_address'] ), 0, 100 ) ) .
 			tep_draw_hidden_field( 'm4', $customer_id ).
@@ -532,22 +523,8 @@ class sagepaynow
             tep_draw_hidden_field( 'm10', 'osCsid=' . tep_session_id()) .
             
 			tep_draw_hidden_field( 'p2', $order_id );
-
-        	// osCsid must be returned so that we know we're working with the same basket
-        	//tep_draw_hidden_field( 'm10', );
-        	//tep_draw_hidden_field( 'm10', tep_session_id());
-        	
             
-			// Extra fields available
-			//tep_draw_hidden_field( 'company', substr( $order->billing['company'], 0, 50 ) ) .
-            //tep_draw_hidden_field( 'address', substr( $order->billing['street_address'], 0, 60 ) ) .
-            //tep_draw_hidden_field( 'city', substr( $order->billing['city'], 0, 40 ) ) .
-            //tep_draw_hidden_field( 'state', substr( $order->billing['state'], 0, 40 ) ) .
-            //tep_draw_hidden_field( 'zip', substr( $order->billing['postcode'], 0, 20 ) ) .
-            //tep_draw_hidden_field( 'country', substr( $order->billing['country']['title'], 0, 60 ) ) .
-            //tep_draw_hidden_field( 'phone', substr( $order->customer['telephone'], 0, 25 ) ) .
-            //tep_draw_hidden_field( 'customer_ip', tep_get_ip_address()) .
-		pnlog (__METHOD__ . '<br>1Sending these fields to Sage Pay Now', $process_button_string);
+			pnlog (__METHOD__ . 'Sending these fields to Sage Pay Now', $process_button_string);
 		
         return $process_button_string;
     }

@@ -6,19 +6,12 @@ osCommerce module for Sage Pay South Africa's Pay Now product.
 Installation 
 ------------
 
-Copy these four files:
+Download the files from Github and copy to your catalog directory. The four files needed are:
 
-* https://github.com/SagePay/PayNow-OsCommerce/blob/master/ext/modules/payment/paynow/paynow.php
-* https://github.com/SagePay/PayNow-OsCommerce/blob/master/includes/languages/english/modules/payment/paynow.php
-* https://github.com/SagePay/PayNow-OsCommerce/blob/master/includes/modules/payment/paynow.php
-* https://github.com/SagePay/PayNow-OsCommerce/blob/master/includes/modules/payment/paynow_common.inc
-
-to your catalog folders, e.g.:
-
-* /your_catalog/ext/modules/payment/paynow.php
-* /your_catalog/includes/languages/english/modules/payment/paynow.php
-* /your_catalog/includes/modules/payment/paynow.php
-* /your_catalog/includes/modules/payment/paynow_common.inc
+* /your_catalog/ext/modules/payment/sagepaynow.php
+* /your_catalog/includes/languages/english/modules/payment/sagepaynow.php
+* /your_catalog/includes/modules/payment/sagepaynow.php
+* /your_catalog/includes/modules/payment/sagepaynow_common.inc
 
 Demo Site
 ---------
@@ -27,3 +20,4 @@ http://oscommerce.gatewaymodules.com
 Change Log
 ----------
 * 5 Mar 2014: First version
+* 12 Apr 2014: Added m10 for better redirection, updated README.md
