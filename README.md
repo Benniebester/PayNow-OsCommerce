@@ -3,7 +3,7 @@ PayNow-OsCommerce
 
 osCommerce module for Sage Pay South Africa's Pay Now product.
 
-Installation
+Installation 
 ------------
 
 Copy these four files:
