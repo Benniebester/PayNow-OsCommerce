@@ -1,4 +1,4 @@
-PayNow-OsCommerce
+PayNow-OsCommerce 
 =================
 
 osCommerce module for Sage Pay South Africa's Pay Now product.
