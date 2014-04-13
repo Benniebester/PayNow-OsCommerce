@@ -101,10 +101,12 @@ function pnlog( $msg = '', $variable = '', $close = false ) {
 		}
 	}
 }
-// }}}
-// {{{ pnGetData
+
 /**
  * pnGetData
+ * 
+ * Used to create a array of POST data
+ * 
  */
 function pnGetData() {
 	// Posted variables from ITN
