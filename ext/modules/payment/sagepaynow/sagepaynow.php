@@ -58,8 +58,11 @@ if( !$pnError )
 }
 
 $SagePayNow_TransactionAccepted = $pnData['TransactionAccepted'];
-if ( $SagePayNow_TransactionAccepted == 'false') {
-	$SagePayNow_Reason = $pnData['Reason'];	
+$SagePayNow_Reason = $pnData['Reason'];
+
+pnlog ("TransactionAccepted=='$SagePayNow_TransactionAccepted', reason:'$SagePayNow_Reason'");
+
+if ( $SagePayNow_TransactionAccepted == 'false') {		
 	$pnError = true;
 	$pnNotes[] = "Transaction Failed. Reason: " . $SagePayNow_Reason;
 }

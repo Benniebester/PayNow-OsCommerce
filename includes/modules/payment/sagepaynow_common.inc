@@ -35,9 +35,7 @@ define ( 'PN_EPSILON', 0.01 );
 define ( 'PN_ERR_AMOUNT_MISMATCH', 'Amount mismatch' );
 define ( 'PN_ERR_BAD_ACCESS', 'Bad access of page' );
 define ( 'PN_ERR_BAD_SOURCE_IP', 'Bad source IP address' );
-define ( 'PN_ERR_CONNECT_FAILED', 'Failed to connect to Pay Now' );
-define ( 'PN_ERR_INVALID_SIGNATURE', 'Security signature mismatch' );
-define ( 'PN_ERR_MERCHANT_ID_MISMATCH', 'Merchant ID mismatch' );
+define ( 'PN_ERR_CONNECT_FAILED', 'Failed to connect to Sage Pay Now' );
 define ( 'PN_ERR_NO_SESSION', 'No saved session found for ITN transaction' );
 define ( 'PN_ERR_ORDER_ID_MISSING_URL', 'Order ID not present in URL' );
 define ( 'PN_ERR_ORDER_ID_MISMATCH', 'Order ID mismatch' );
@@ -51,7 +49,7 @@ define ( 'PN_ERR_UNKNOWN', 'Unkown error occurred' );
 // General
 define ( 'PN_MSG_OK', 'Payment was successful' );
 define ( 'PN_MSG_FAILED', 'Payment has failed' );
-define ( 'PN_MSG_PENDING', 'The payment is pending. Please note, you will receive another Instant' . ' Transaction Notification when the payment status changes to' . ' "Completed", or "Failed"' );
+define ( 'PN_MSG_PENDING', 'The payment is pending. Please note, you will receive another Instant' . ' Payment Notification when the payment status changes to' . ' "Completed", or "Failed"' );
 
 /**
  * pnlog
@@ -60,9 +58,8 @@ define ( 'PN_MSG_PENDING', 'The payment is pending. Please note, you will receiv
  *
  * Merged from /whmcs/autoload/debug
  * 
- * Log close called once in ext/modules/payment/paynow/paynow.php
+ * Log close called once in ext/modules/payment/sagepaynow/sagepaynow.php
  *
- * @author Eugene van der Merwe, Gateway Modules
  * @param $msg String
  *        	Message to log
  * @param $close Boolean
@@ -81,7 +78,7 @@ function pnlog( $msg = '', $variable = '', $close = false ) {
 			// If file doesn't exist, create it
 			if (! $fh) {
 				$pathinfo = pathinfo ( __FILE__ );
-				$fh = fopen ( $pathinfo ['dirname'] . '/paynow.log', 'a+' );
+				$fh = fopen ( $pathinfo ['dirname'] . '/sagepaynow.log', 'a+' );
 			}
 			
 			// If file was successfully created
