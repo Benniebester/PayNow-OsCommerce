@@ -65,6 +65,7 @@ pnlog ("TransactionAccepted=='$SagePayNow_TransactionAccepted', reason:'$SagePay
 if ( $SagePayNow_TransactionAccepted == 'false') {		
 	$pnError = true;
 	$pnNotes[] = "Transaction Failed. Reason: " . $SagePayNow_Reason;
+	// TODO Add code to put failed status in orders table
 }
 
 // Retrieve order from eCommerce System
@@ -123,7 +124,7 @@ if( !$pnError )
         $total = tep_db_fetch_array( $total_query );
 
         // Add comment to order history
-        $comment_status = "Transaction ID ". $pnData['pn_payment_id'];
+        $comment_status = "Request Trace ". $pnData['RequestTrace'];
         $comment_status = $pnData['payment_status'] .' ('. $currencies->format( $pnData['amount_gross'], false, 'ZAR' ) .')';
 
         $orderValue = number_format( $total['value'] * $order['currency_value'], $currencies->get_decimal_places( $order['currency'] ), '.', '' );
@@ -196,7 +197,7 @@ pnlog( '', '', true );
 
 require('includes/application_bottom.php');
 
-echo "Payment has failed. Reason: " . $SagePayNow_Reason . "<br>";
+echo "Payment has failed. Reason: " . $SagePayNow_Reason . "<br><br>";
 $Redirect_Url = tep_href_link( FILENAME_CHECKOUT_PAYMENT, '', 'SSL' ); 
 echo "<a href='$Redirect_Url'>Click here</a> to return to osCommerce checkout";
 
