@@ -66,22 +66,22 @@ B. osCommerce Steps:
 
 You are now ready to transact. Remember to turn of "Make test mode active:" when you are ready to go live.
 
-Here is a screenshot of what the osCommerce settings screen for Sage Pay Now configuration:
+Here is a screenshot of what the osCommerce settings screen for the Sage Pay Now configuration:
 ![alt tag](http://oscommerce.gatewaymodules.com/oscommerce_screenshot1.png)
-
-Revision History
-----------------
-
-* 10 May 2014/1.1.1	Improved README.md file with a screenshot of settings
-* 29 Mar 2014/1.1.0	Redid the documentation in Google Docs and added a table of contents and screenshots. Shared with Maryna and Donovan
-* 5 Mar 2014/1.0.0	First version
-
-Tested with OsCommerce version 2.3.3.4
 
 Demo Site
 ---------
 There is a demo site if you want to see osCommerce and the Sage Pay Now gateway in action:
 http://oscommerce.gatewaymodules.com
+
+Revision History
+----------------
+
+* 10 May 2014/1.1.1	Improved README.md file with a screenshot of settings
+* 29 Mar 2014/1.1.0	Documentation review
+* 5 Mar 2014/1.0.0	First version
+
+Tested with OsCommerce version 2.3.3.4
 
 Feedback, issues & feature requests
 -----------------------------------
