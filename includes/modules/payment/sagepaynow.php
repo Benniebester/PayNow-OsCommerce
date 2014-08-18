@@ -516,8 +516,12 @@ class sagepaynow
             tep_draw_hidden_field( 'm9', substr( trim( $order->customer['email_address'] ), 0, 100 ) ) .
 			tep_draw_hidden_field( 'm4', $customer_id ).
 
-			// Item details			
-			tep_draw_hidden_field( 'p3', substr( trim( $item_description ), 0, 255 ) ) .
+			// Item details updated 18 Aug 2014 to be more descriptive
+            tep_draw_hidden_field ('p3', $item_description . ' (' . $order->billing['firstname'] . ' ' . $order->billing['lastname'] . ' - #' . $order_id . ')' ).
+            // m6 added 18 Aug 2014, same as p3
+            tep_draw_hidden_field ('m6', $item_description . ' (' . $order->billing['firstname'] . ' ' . $order->billing['lastname'] . ' - #' . $order_id . ')' ).
+
+			//tep_draw_hidden_field( 'p3', substr( trim( $item_description ), 0, 255 ) ) .
             tep_draw_hidden_field( 'p4', $amount ) .
             
             tep_draw_hidden_field( 'm10', 'osCsid=' . tep_session_id()) .

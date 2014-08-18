@@ -1,7 +1,7 @@
 Sage Pay Now - OsCommerce Payment Gateway Module
 ================================================
 
-Revision 1.1.1
+Revision 1.1.2
 
 Introduction
 ------------
@@ -51,7 +51,7 @@ A. Sage Pay Now Gateway Server Configuration Steps:
 7. Click "Allow credit card payments:"
 
 8. The Accept and Decline URLs should both be:
-	http://oscommerce_installation/ext/modules/payment/sagepaynow/sagepaynow.php
+	http://www.your_website.co.za/ext/modules/payment/sagepaynow/sagepaynow.php
 
 9. It is highly recommended that you "Make test mode active:" while you are still testing your site.
 
@@ -77,6 +77,8 @@ http://oscommerce.gatewaymodules.com
 Revision History
 ----------------
 
+* 18 Aug 2014/1.1.2 Updated P3 to be more descriptive and added M6 to equal P3
+                    Added more descriptive information in README.md with regards to where files should be installed
 * 10 May 2014/1.1.1	Improved README.md file with a screenshot of settings
 * 29 Mar 2014/1.1.0	Documentation review
 * 5 Mar 2014/1.0.0	First version
