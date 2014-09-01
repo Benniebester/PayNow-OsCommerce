@@ -36,7 +36,7 @@ Prerequisites:
 You will need:
 * Sage Pay Now login credentials
 * Sage Pay Now Service key
-* OpenCart admin login credentials
+* osCommerce admin login credentials
 
 A. Sage Pay Now Gateway Server Configuration Steps:
 
