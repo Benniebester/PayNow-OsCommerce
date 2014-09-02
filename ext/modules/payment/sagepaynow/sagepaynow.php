@@ -196,7 +196,8 @@ if( $pnError )
 // Close log
 pnlog( '', '', true );
 
-require('includes/application_bottom.php');
+// Removed 2 Sep '14 after some applications showed smarty type templates. Screen now has vanilla output.
+//require('includes/application_bottom.php');
 
 echo "Payment has failed. Reason: " . $SagePayNow_Reason . "<br><br>";
 $Redirect_Url = tep_href_link( FILENAME_CHECKOUT_PAYMENT, '', 'SSL' ); 
