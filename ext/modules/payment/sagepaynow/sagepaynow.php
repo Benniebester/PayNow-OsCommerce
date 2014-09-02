@@ -34,11 +34,12 @@ $pnDebugEmail = ( strlen( MODULE_PAYMENT_PAYNOW_DEBUG_EMAIL ) > 0 ) ?
 pnlog( 'Debug email address = '. $pnDebugEmail );
 
 // Notify Sage Pay Now that information has been received
-if( !$pnError )
-{
-    header( 'HTTP/1.0 200 OK' );
-    flush();
-}
+// Removed 2 Sep '14 after 'headers already sent' problems on some servers
+//if( !$pnError )
+//{
+    //header( 'HTTP/1.0 200 OK' );
+    //flush();
+//}
 
 // Get data sent by Pay Now
 if( !$pnError )
